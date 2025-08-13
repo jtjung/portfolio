@@ -239,6 +239,7 @@ export default function Home() {
             </div>
           </HorizontalScrollItem>
 
+
           {/* Working on now Section */}
           <HorizontalScrollItem>
             <div>
@@ -257,7 +258,7 @@ export default function Home() {
                 </div>
                 <div className="relative h-[300px] rounded-xl overflow-hidden">
                   <Image
-                    src="/images/profile.jpg"
+                    src="/images/profile_2.jpg"
                     alt="JT Jung"
                     fill
                     className="object-cover"
