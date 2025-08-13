@@ -1,12 +1,9 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { HorizontalScroll, HorizontalScrollItem } from "@/components/ui/horizontal-scroll";
 
 export default function Home() {
-
   return (
     <div className="min-h-screen">
       {/* Navigation */}
@@ -122,7 +119,7 @@ export default function Home() {
             <div>
               <div className="grid grid-cols-2 gap-8 items-center">
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-bold tracking-tighter mb-4">Hi there, I&apos;m JT.</h2>
+                  <h2 className="text-2xl font-bold tracking-tighter mb-4">Hi there, I'm JT.</h2>
                   <p className="text-lg text-stone-900 dark:text-stone-400">
                     Product Manager by day and Philomath by night.
                   </p>
@@ -284,58 +281,23 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="p-6 border border-border rounded-lg bg-card/50">
-                  <form className="space-y-4" onSubmit={(e) => {
-                    e.preventDefault();
-                    const name = (document.getElementById('name') as HTMLInputElement).value;
-                    const email = (document.getElementById('email') as HTMLInputElement).value;
-                    const message = (document.getElementById('message') as HTMLTextAreaElement).value;
-
-                    // Create mailto link with form data
-                    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-                    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`);
-                    const mailtoUrl = `mailto:jtj0828@gmail.com?subject=${subject}&body=${body}`;
-
-                    // Open the mailto link
-                    window.location.href = mailtoUrl;
-                  }}>
+                  <form className="space-y-4">
                     <div className="grid grid-cols-1 gap-4">
                       <div className="space-y-2">
                         <label htmlFor="name" className="text-sm font-medium">Name</label>
-                        <input
-                          id="name"
-                          name="name"
-                          placeholder="Your name"
-                          className="w-full p-2 rounded-md border border-border bg-background"
-                          required
-                        />
+                        <input id="name" placeholder="Your name" className="w-full p-2 rounded-md border border-border bg-background" />
                       </div>
                       <div className="space-y-2">
                         <label htmlFor="email" className="text-sm font-medium">Email</label>
-                        <input
-                          id="email"
-                          name="email"
-                          type="email"
-                          placeholder="Your email"
-                          className="w-full p-2 rounded-md border border-border bg-background"
-                          required
-                        />
+                        <input id="email" type="email" placeholder="Your email" className="w-full p-2 rounded-md border border-border bg-background" />
                       </div>
                       <div className="space-y-2">
                         <label htmlFor="message" className="text-sm font-medium">Message</label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          placeholder="Your message"
-                          className="w-full p-2 rounded-md border border-border bg-background min-h-[100px]"
-                          required
-                        />
+                        <textarea id="message" placeholder="Your message" className="w-full p-2 rounded-md border border-border bg-background min-h-[100px]" />
                       </div>
                     </div>
-                    <Button
-                      type="submit"
-                      className="w-full cursor-pointer"
-                    >
-                      Send Message
+                    <Button className="w-full" asChild>
+                      <a href="mailto:jtj0828@gmail.com">Send Message</a>
                     </Button>
                   </form>
                 </div>
