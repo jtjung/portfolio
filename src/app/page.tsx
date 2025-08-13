@@ -119,7 +119,7 @@ export default function Home() {
             <div>
               <div className="grid grid-cols-2 gap-8 items-center">
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-bold tracking-tighter mb-4">Hi there, I'm JT.</h2>
+                  <h2 className="text-2xl font-bold tracking-tighter mb-4">Hi there, I&apos;m JT.</h2>
                   <p className="text-lg text-stone-900 dark:text-stone-400">
                     Product Manager by day and Philomath by night.
                   </p>
