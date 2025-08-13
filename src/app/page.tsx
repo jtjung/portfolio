@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { HorizontalScroll, HorizontalScrollItem } from "@/components/ui/horizontal-scroll";
+import { PhotoCarousel } from "@/components/ui/photo-carousel";
 
 export default function Home() {
   return (
@@ -263,6 +264,37 @@ export default function Home() {
                     fill
                     className="object-cover"
                     priority
+                  />
+                </div>
+              </div>
+            </div>
+          </HorizontalScrollItem>
+
+          <HorizontalScrollItem>
+            <div>
+              <div className="grid grid-cols-1 gap-8 items-center">
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold tracking-tighter mb-4">Traveling allows me to encounter new people and ways of life.</h2>
+                  <PhotoCarousel 
+                    images={[
+                      "/travel/230504009946020002.JPG",
+                      "/travel/230504009946020007.JPG",
+                      "/travel/230504009946020017.JPG",
+                      "/travel/231128018655020013.JPG",
+                      "/travel/231128018655030003.JPG",
+                      "/travel/231128018655030007.jpg",
+                      "/travel/231128018655030010.JPG",
+                      "/travel/231128018655030022.JPG",
+                      "/travel/231128018655030032.JPG",
+                      "/travel/231128018655040003.JPG",
+                      "/travel/231128018655040005.JPG",
+                      "/travel/231128018655040021.JPG",
+                      "/travel/231128018655050035.JPG",
+                      "/travel/IMG_6043.jpg",
+                      "/travel/IMG_6103.jpg",
+                      "/travel/IMG_6104.jpg",
+                      "/travel/IMG_6145.jpg"
+                    ]}
                   />
                 </div>
               </div>
